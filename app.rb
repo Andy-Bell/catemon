@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/player'
+require_relative './lib/game'
 class Catemon < Sinatra::Base
 
   enable :sessions
@@ -21,9 +22,10 @@ class Catemon < Sinatra::Base
   end
 
   get '/attack' do
+    @game = Game.new
     @player_1 = $player_1
     @player_2 = $player_2
-    @player_1.attack(@player_2)
+    @game.attack(@player_2)
     erb :attack
   end
   # start the server if ruby file executed directly
