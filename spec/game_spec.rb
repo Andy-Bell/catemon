@@ -23,15 +23,6 @@ describe Game do
     end
   end
 
-  describe "#turn_number" do
-    it "responds to turn_number" do
-      expect{ game.turn_number }.not_to raise_error
-    end
-    it "generates a number" do
-      expect(game.turn_number).to respond_to(:even?)
-    end
-  end
-
   describe "set_turn" do
     it "returns player 1 when given turn one" do
       expect(game.set_turn).to eq player_spy_1

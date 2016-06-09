@@ -13,7 +13,6 @@ class Battle < Sinatra::Base
 
   post '/names' do
     $game = Game.build(params[:player_1_name], params[:player_2_name])
-  	p params
   	redirect '/play'
   end
 
