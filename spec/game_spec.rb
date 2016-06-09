@@ -6,9 +6,14 @@ describe Game do
   let(:player_spy_2) { spy(:player_spy_2) }
 
   describe "#attack" do
-    it "checks deduct is called on player" do
+    it "checks deduct is called on player 2" do
       game.attack
-      expect(player_spy_2).to have_recieved(:deduct)
+      expect(player_spy_2).to have_received(:deduct)
+    end
+    it "checks deduct is called on player 1" do
+      game.attack
+      game.attack
+      expect(player_spy_1).to have_received(:deduct)
     end
   end
 
@@ -17,7 +22,7 @@ describe Game do
       expect{ game.player_1 }.not_to raise_error
     end
   end
-  
+
   describe "#turn_number" do
     it "responds to turn_number" do
       expect{ game.turn_number }.not_to raise_error
@@ -38,4 +43,3 @@ describe Game do
     end
   end
 end
-
