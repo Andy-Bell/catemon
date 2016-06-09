@@ -28,6 +28,11 @@ class Game
     player_select(1)
   end
 
+  def over?
+    return true if (player_1.hp == 0 || player_2.hp == 0)
+    false
+  end
+
   private
 
   attr_reader :turn_number

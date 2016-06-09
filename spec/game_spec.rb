@@ -4,6 +4,7 @@ describe Game do
   subject(:game) { described_class.new(player_spy_1, player_spy_2) }
   let(:player_spy_1) { spy(:player_spy_1) }
   let(:player_spy_2) { spy(:player_spy_2) }
+  let(:dead_player) { spy(:dead_player, hp: 0) }
 
   describe "#attack" do
     it "checks deduct is called on player 2" do
@@ -31,6 +32,13 @@ describe Game do
     it "returns player 2 when given turn 2" do
       game.attack
       expect(game.set_turn).to eq player_spy_2
+    end
+  end
+
+  describe "#over?" do
+    it "returns true if either player is at 0HP" do
+      lost_game = Game.new(player_spy_1, dead_player)
+      expect(lost_game.over?).to eq true
     end
   end
 end
