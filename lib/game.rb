@@ -4,6 +4,7 @@ class Game
 
   attr_reader :player_1, :player_2, :defender, :attacker
 
+
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
@@ -21,7 +22,7 @@ class Game
   def self.build(name_1, name_2)
     player_1 = Player.new(name_1)
     player_2 = Player.new(name_2)
-    new(player_1, player_2)
+    @game = Game.new(player_1, player_2)
   end
 
   def set_turn
@@ -31,6 +32,14 @@ class Game
   def over?
     return true if (player_1.hp == 0 || player_2.hp == 0)
     false
+  end
+
+  def self.store(game)
+    @game = game
+  end
+
+  def self.instance
+    @game
   end
 
   private
