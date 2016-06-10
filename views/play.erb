@@ -7,15 +7,15 @@
 
 <body>
   <div class="main_wrapper">
-    <img src="./images/title.png"/>
+    <img src=""/>
     <div class = "screen">
       <div class = "left_wrapper">
         <div class = "message_container"><%= @status %></div>
         <div class = "active_player"><%= @game.attacker.name %>, it's your turn!</div>
           <% if @game.attacker == @game.player1 %>
-            <img src="./images/pikachu_back.gif" style ="width=auto; max-height: 300px"/>
+            <img src="" style ="width=auto; max-height: 300px"/>
           <% else %>
-            <img src="./images/jiggly_back.gif" style ="width=auto; height: 300px"/>
+            <img src="" style ="width=auto; height: 300px"/>
           <% end %>
       </div>
       <div class = "right_wrapper">
@@ -41,9 +41,9 @@
           </div>
           <div class="opponent_creature">
             <% if @game.attacker == @game.player1 %>
-              <img src="./images/jiggly_front.gif" style ="width=auto; max-height: 160px"/>
+              <img src="" style ="width=auto; max-height: 160px"/>
             <% else %>
-              <img src="./images/pikachu_front.gif" style ="width=auto; max-height: 160px"/>
+              <img src="" style ="width=auto; max-height: 160px"/>
             <% end %>
           </div>
         </div>

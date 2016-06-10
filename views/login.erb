@@ -1,27 +1,53 @@
 <html>
 <head>
 	<title>Battle Start</title>
-	 <link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<div class="main_wrapper">
-    <img src="./images/title.png"/>
-			<div id="multiplayer">
-				<form action="/names" method="POST">
-					<input type="Text" name="Player1" placeholder="Player 1">
-					<input type="Text" name="Player2" placeholder="Player 2">
-					<input type="submit" id="Submit" value="2 Player">
-				</form>
-			</div>
 
-			<div id="single_player">
-				<form action="/single" method="POST">
-					<input type="text" name="Player" placeholder="Player">
-					<input type="hidden" name="AI" value="Capybara">
-					<input type="submit" id="single_player" value="Single player">
-				</form>
-			</div>
-		</div>
-	</div>
+	<table class="main_wrapper" border="1">
+		<img src=""/>
+		<tr>
+			<td>
+				<table id="multiplayer" border="1">
+					<form action="/names" method="POST">
+						<tr>
+							<td>
+								<input type="Text" name="Player1" placeholder="Player 1">
+							</td>
+							<td>
+								<input type="Text" name="Player2" placeholder="Player 2">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" id="Submit" value="2 Player">
+							</td>
+						</tr>
+					</form>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<table id="single_player" border="1">
+					<form action="/single" method="POST">
+						<tr>
+							<td>
+								<input type="text" name="Player" placeholder="Player">
+							</td>
+						</tr>
+						<input type="hidden" name="AI" value="Capybara">
+						<tr>
+							<td>
+								<input type="submit" id="single_player" value="Single player">
+							</td>
+						</tr>
+					</form>
+				</table>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>

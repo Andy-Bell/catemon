@@ -7,6 +7,10 @@ class Battle < Sinatra::Base
   set :session_secret, "My session secret"
 
   get '/' do
+    erb(:index)
+  end
+
+  get '/login' do
     'This is a battle app!'
     erb(:login)
   end
