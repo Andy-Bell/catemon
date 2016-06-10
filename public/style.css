@@ -121,3 +121,7 @@ img:-moz-broken {
 *{
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+#broken_image {
+  background-image: url('./images/broken-link-image-gif.jpg');
+}
