@@ -53,6 +53,10 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  get '/418' do
+    erb(:error)
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
