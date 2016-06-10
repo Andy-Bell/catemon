@@ -5,11 +5,14 @@
 
 
 .marquee {
-  height: 50px;
+  height: 200px;
   overflow: hidden;
   position: relative;
+  color: white;
 }
 .marquee p {
+  font-size: 56px;
+  font-family: fantasy;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -49,6 +52,8 @@
 
 .blog {
   width: 20%;
+  background-image: url('./images/bgfire3.gif');
+  color: white;
 
 }
 
@@ -63,4 +68,56 @@ thead {
 iframe {
   height: 100%;
   width: 100%;
+}
+
+.image1 {
+  width: 20%;
+}
+
+.image2 {
+  width: 40%;
+  color: white;
+  font-size: 16px;
+  font-family: fantasy;
+}
+
+.image3 {
+  width: 20%;
+}
+
+.main_wrapper {
+  background-image: url('./images/greenwonder.gif');
+  width: 800px;
+}
+
+#index_background {
+  background-image: url('./images/bghippy.gif');
+}
+
+img:-moz-broken {
+    -moz-force-broken-image-icon: 1;
+}
+
+.active_player {
+  color: white;
+  font-size: 50px;
+}
+
+.inactive_player {
+  color: red;
+  font-size: 20px;
+}
+
+.opponent_data {
+  color: red;
+  font-size: 20px;
+}
+
+.message_container {
+  color: orange;
+  font-size: 18px;
+}
+
+*{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
