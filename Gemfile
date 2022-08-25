@@ -1,8 +1,10 @@
 source "https://rubygems.org"
-ruby "2.3.1"
+ruby "3.0.1"
 gem "sinatra"
 gem "rspec-sinatra"
 gem "rspec"
 gem "capybara"
 gem "shotgun"
 gem "EmojifyRspecFormatter"
+
+gem "puma", "~> 5.6"
